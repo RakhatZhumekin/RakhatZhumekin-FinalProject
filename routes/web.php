@@ -37,11 +37,11 @@ Route::get('/post/add', function() {
     ]);
 });
 
-Route::get('/post/{post_id}', function($post_id) { // returns the profile of the post author
-    $post = Post::find($post_id);
+// Route::get('/post/{post_id}', function($post_id) { // returns the profile of the post author
+//     $post = Post::find($post_id);
 
-    return $post->profile;
-});
+//     return $post->profile;
+// });
 
 Route::get('/', function() {
     return view('main');
@@ -50,3 +50,15 @@ Route::get('/', function() {
 Route::get('/profiles', [ProfileController::class, 'index']);
 
 Route::get('/blog', [BlogController::class, 'index']);
+
+Route::get('/profile/create', function() {
+    return view('profiles.create');
+});
+
+Route::post('/profile/create', [ProfileController::class, 'store']) -> name('add-profile');
+
+Route::get('/post/create', function() {
+    return view('blog.create');
+});
+
+Route::post('/post/create', [BlogController::class, 'store']) -> name('add-post');
