@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 
-use App\Models\UserModel;
+use App\Models\Profile;
 use App\Models\Post;
 
 /*
@@ -19,4 +19,24 @@ use App\Models\Post;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/profile/add', function() {
+    DB::table('profiles')->insert([
+        'name' => 'Rakhat'
+    ]);
+});
+
+Route::get('/post/add', function() {
+    DB::table('posts')->insert([
+        'profile_id' => 1,
+        'title' => 'Some title',
+        'body' => 'Some body'
+    ]);
+});
+
+Route::get('/post/{post_id}', function($post_id) { // returns the profile of the post author
+    $post = Post::find($post_id);
+
+    return $post->profile;
 });
