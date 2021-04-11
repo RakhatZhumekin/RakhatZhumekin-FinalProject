@@ -12,6 +12,8 @@ class Post extends Model
 
     protected $table = 'posts';
 
+    protected $fillable = ['profile_id', 'title', 'body'];
+
     public function profile()
     {
         return $this->belongsTo(Profile::class);

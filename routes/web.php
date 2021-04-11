@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\DB;
 
 use App\Models\Profile;
 use App\Models\Post;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +19,7 @@ use App\Models\Post;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
@@ -40,3 +42,11 @@ Route::get('/post/{post_id}', function($post_id) { // returns the profile of the
 
     return $post->profile;
 });
+
+Route::get('/', function() {
+    return view('main');
+}) -> name('main');
+
+Route::get('/profiles', [ProfileController::class, 'index']);
+
+Route::get('/blog', [BlogController::class, 'index']);

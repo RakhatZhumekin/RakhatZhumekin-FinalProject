@@ -12,6 +12,8 @@ class Profile extends Model
 
     protected $table = 'profiles';
 
+    protected $fillable = ['name', 'photo'];
+
     public function posts()
     {
         return $this->hasMany(Post::class);
