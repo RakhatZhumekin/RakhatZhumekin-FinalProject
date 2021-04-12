@@ -9,6 +9,11 @@ body {
 	color: #210b2c;
 }
 
+h1 {
+	text-align: center;
+	color: #210b2c;
+}
+
 #nothing {
 	color: #55286f;
 	font-size: 30px;
@@ -20,4 +25,15 @@ table,
 th,
 td {
 	border: 1px solid #55286f;
+}
+
+td {
+	width: 300px;
+	text-align: center;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
 }

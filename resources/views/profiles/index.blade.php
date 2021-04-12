@@ -16,16 +16,22 @@
     </div>
     <hr size="2px" width="90%" color="#210b2c">
     
+    <h1>All Profiles</h1>
+    <table class="profiles">
+    <tr>
+        <th>Profile ID</th>
+        <th>Profile Name</th>
+        <th>Profile Photo</th>
+    </tr>
     @forelse ($profiles as $profile)
-        <table class="profiles">
             <tr class="profile_row">
                 <td>{{$profile->id}}</td>
                 <td>{{$profile->name}}</td>
-                <td><img src="{{$profile->photo}}" width="100px"></td>
+                <td><img src="{{$profile->photo}}" width="100px" height="50px"></td>
             </tr>
-        </table>
     @empty
         <p id="nothing">There are no profiles registered.</p>
     @endforelse
+    </table>
 </body>
 </html>
