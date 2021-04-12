@@ -1,0 +1,23 @@
+body {
+	background-color: #d8b4e2;
+}
+
+.header {
+	display: flex;
+	justify-content: space-around;
+	font-size: 25px;
+	color: #210b2c;
+}
+
+#nothing {
+	color: #55286f;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 20%;
+}
+
+table,
+th,
+td {
+	border: 1px solid #55286f;
+}
