@@ -7,6 +7,18 @@ h1 {
 	color: #210b2c;
 }
 
+.header {
+	display: flex;
+	justify-content: space-around;
+	font-size: 25px;
+	color: #210b2c;
+}
+
+a {
+	text-decoration: none;
+	color: #210b2c;
+}
+
 #Hello {
-	margin-top: 20%;
+	margin-top: 15%;
 }

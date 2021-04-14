@@ -1,3 +1,28 @@
 body {
-	background-color: beige;
+	background-color: #d8b4e2;
+}
+
+.header {
+	display: flex;
+	justify-content: space-around;
+	font-size: 25px;
+	color: #210b2c;
+}
+
+h1 {
+	text-align: center;
+	color: #210b2c;
+}
+
+form {
+	text-align: center;
+}
+
+input {
+	margin-right: 10px;
+}
+
+a {
+	text-decoration: none;
+	color: #210b2c;
 }

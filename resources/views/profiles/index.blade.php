@@ -10,9 +10,9 @@
 </head>
 <body>
     <div class="header">
-        <div id="add_profile">Add Profile</div>
-        <div id="add_post">Add Post</div>
-        <div id="posts">All Posts</div>
+        <div id="add_profile"><a href="{{URL::route('add-profile')}}">Add Profile</a></div>
+        <div id="add_post"><a href="{{URL::route('add-post')}}">Add Post</a></div>
+        <div id="posts"><a href="{{URL::route('posts')}}">All Posts</a></div>
     </div>
     <hr size="2px" width="90%" color="#210b2c">
     

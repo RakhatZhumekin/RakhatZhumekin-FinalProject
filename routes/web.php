@@ -8,6 +8,8 @@ use App\Models\Post;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProfileController;
 
+use App\Http\Controllers\MailController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,20 +25,6 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/profile/add', function() {
-    DB::table('profiles')->insert([
-        'name' => 'Rakhat'
-    ]);
-});
-
-Route::get('/post/add', function() {
-    DB::table('posts')->insert([
-        'profile_id' => 1,
-        'title' => 'Some title',
-        'body' => 'Some body'
-    ]);
-});
-
 // Route::get('/post/{post_id}', function($post_id) { // returns the profile of the post author
 //     $post = Post::find($post_id);
 
@@ -47,18 +35,22 @@ Route::get('/', function() {
     return view('main');
 }) -> name('main');
 
-Route::get('/profiles', [ProfileController::class, 'index']);
+Route::get('/profiles', [ProfileController::class, 'index']) -> name('profiles');
 
-Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/posts', [BlogController::class, 'index']) -> name('posts');
 
 Route::get('/profile/create', function() {
     return view('profiles.create');
-});
+}) -> name('add-profile');
 
 Route::post('/profile/create', [ProfileController::class, 'store']) -> name('add-profile');
 
 Route::get('/post/create', function() {
     return view('blog.create');
-});
+}) -> name('add-post');
 
 Route::post('/post/create', [BlogController::class, 'store']) -> name('add-post');
+
+Route::get('/mail/send', [MailController::class, 'index']) -> name('send-mail');
+
+Route::post('/mail/send', [MailController::class, 'send']) -> name('send_mail');

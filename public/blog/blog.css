@@ -1,0 +1,44 @@
+body {
+	background-color: #d8b4e2;
+}
+
+.header {
+	display: flex;
+	justify-content: space-around;
+	font-size: 25px;
+	color: #210b2c;
+}
+
+h1 {
+	text-align: center;
+	color: #210b2c;
+}
+
+#nothing {
+	color: #55286f;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 20%;
+}
+
+table,
+th,
+td {
+	border: 1px solid #55286f;
+}
+
+td {
+	width: 200px;
+	text-align: center;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
+}
+
+a {
+	text-decoration: none;
+	color: #210b2c;
+}
