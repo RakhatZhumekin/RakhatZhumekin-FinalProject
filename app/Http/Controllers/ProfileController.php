@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App;
+
 use App\Models\Profile;
 
 use Illuminate\Support\Facades\Storage;
@@ -12,8 +14,9 @@ use Illuminate\Support\Facades\Session;
 
 class ProfileController extends Controller
 {
-    public function index() {
+    public function index($lang) {
         $profiles = Profile::all();
+        App::setLocale($lang);
 
         return view('profiles.index')->with(['profiles'=>$profiles]);
     }

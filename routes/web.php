@@ -31,26 +31,29 @@ Route::get('/welcome', function () {
 //     return $post->profile;
 // });
 
-Route::get('/', function() {
+Route::get('/main/{lang}', function($lang) {
+    App::setlocale($lang);
     return view('main');
 }) -> name('main');
 
-Route::get('/profiles', [ProfileController::class, 'index']) -> name('profiles');
+Route::get('/profiles/{lang}', [ProfileController::class, 'index']) -> name('profiles');
 
-Route::get('/posts', [BlogController::class, 'index']) -> name('posts');
+Route::get('/posts/{lang}', [BlogController::class, 'index']) -> name('posts');
 
-Route::get('/profile/create', function() {
+Route::get('/profile/create/{lang}', function($lang) {
+    App::setlocale($lang);
     return view('profiles.create');
 }) -> name('add-profile');
 
-Route::post('/profile/create', [ProfileController::class, 'store']) -> name('add-profile');
+Route::post('/profile/create/{lang}', [ProfileController::class, 'store']) -> name('add-profile');
 
-Route::get('/post/create', function() {
+Route::get('/post/create/{lang}', function($lang) {
+    App::setlocale($lang);
     return view('blog.create');
 }) -> name('add-post');
 
-Route::post('/post/create', [BlogController::class, 'store']) -> name('add-post');
+Route::post('/post/create/{lang}', [BlogController::class, 'store']) -> name('add-post');
 
-Route::get('/mail/send', [MailController::class, 'index']) -> name('send-mail');
+Route::get('/mail/send/{lang}', [MailController::class, 'index']) -> name('send-mail');
 
-Route::post('/mail/send', [MailController::class, 'send']) -> name('send_mail');
+Route::post('/mail/send/{lang}', [MailController::class, 'send']) -> name('send_mail');

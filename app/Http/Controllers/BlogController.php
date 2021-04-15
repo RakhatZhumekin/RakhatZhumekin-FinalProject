@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App;
+
 use Illuminate\Http\Request;
 
 use App\Models\Post;
@@ -9,8 +11,9 @@ use App\Models\Profile;
 
 class BlogController extends Controller
 {
-    public function index() {
+    public function index($lang) {
         $posts = Post::all();
+        App::setlocale($lang);
 
         return view('blog.index')->with(['posts'=>$posts]);
     }
