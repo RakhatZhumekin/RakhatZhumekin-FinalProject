@@ -1,62 +1,42 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Final Project
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This project is made for the INF-232 course as the final project submission. It was made via Laravel and MySQL.
 
-## About Laravel
+## Description
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The project simulates a social media, with the functionality to add users, posts, as well as see all users and posts.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Some screenshots:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+![Screenshot_7](https://user-images.githubusercontent.com/75520711/114865838-a5047780-9e14-11eb-9389-20e997219108.png)
 
-## Learning Laravel
+![Screenshot_8](https://user-images.githubusercontent.com/75520711/114865858-ae8ddf80-9e14-11eb-9ec3-d0149958f34c.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![Screenshot_9](https://user-images.githubusercontent.com/75520711/114865871-b2216680-9e14-11eb-83b3-2a2337f0b09d.png)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![Screenshot_10](https://user-images.githubusercontent.com/75520711/114865885-b51c5700-9e14-11eb-95a0-6ba7dd7c58b3.png)
 
-## Laravel Sponsors
+## ER-Diagram
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+The project uses two tables: profiles and posts. They have a one-to-many relationship, as a user/profile can make many posts, whereas a post can only be made by one person.
+Both profile and post have a primary key ID, post also has a foreign key which references the author's profile id.
 
-### Premium Partners
+![Screenshot_3](https://user-images.githubusercontent.com/75520711/114865112-a2ede900-9e13-11eb-9a51-2cf148ab61e6.png)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+## Mail sending
 
-## Contributing
+The site also has a mail sending functionality, where a user can send a mail to the creator of the project, filling out the sender name and the message.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![Screenshot_4](https://user-images.githubusercontent.com/75520711/114865384-fc561800-9e13-11eb-8f8a-ff7a319db0c3.png)
 
-## Code of Conduct
+## Localization
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+The site supports two languages, those being English and Russian. You can switch between them by changing the URL.
 
-## Security Vulnerabilities
+English:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![Screenshot_5](https://user-images.githubusercontent.com/75520711/114865558-3a533c00-9e14-11eb-8f55-e812ff2d571a.png)
 
-## License
+Russian:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![Screenshot_6](https://user-images.githubusercontent.com/75520711/114865569-3e7f5980-9e14-11eb-8a47-66b19f9da890.png)
